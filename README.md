@@ -8,43 +8,6 @@ DocSpot is a full-stack web application that simplifies booking medical appointm
 
 ---
 
-## Table of Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Architecture](#-technical-architecture)
-- [Database Schema](#-database-schema)
-- [Screenshots & Demo](#-screenshots--demo)
-- [Prerequisites](#-prerequisites)
-- [Installation & Setup](#-installation--setup)
-- [Project Structure](#-project-structure)
-- [Contribution](#-contribution)
-- [License](#-license)
-
----
-
-## 🚀 Features
-
-### Patient (User)
-- Easy registration with email verification
-- Search & filter doctors by specialty, location, and availability
-- Real-time appointment slot selection
-- Secure medical document upload
-- Dashboard: booking history, notifications, appointment status
-- Cancel or reschedule appointments
-
-### Doctor
-- Manage profile, availability timings, consultation fees, and experience
-- Approve, reject, or complete appointment requests
-- Update patient records and provide post-care (digital prescriptions, summaries)
-
-### Admin
-- Approve new doctor registrations
-- Manage users and doctors (block/unblock)
-- Oversee platform compliance and governance
-
----
-
 ## 🛠 Tech Stack
 
 **Frontend**
@@ -73,40 +36,6 @@ DocSpot follows a classic client-server architecture:
 2. **Server (Express):** Business logic, authentication, file processing.
 3. **Database (MongoDB):** Stores users, doctors, appointments, documents.
 
----
-
-## 🗄 Database Schema
-
-Collections overview:
-
-### Users
-- `_id` — Unique identifier
-- `name` — Full name
-- `email` — Email address
-- `password` — Hashed password
-- `isDoctor` — Boolean
-- `isAdmin` — Boolean
-- `notification` — Array of notifications
-
-### Doctors
-- `_id` — Unique identifier
-- `userId` — Reference to Users
-- `specialization` — Specialty
-- `experience` — Years
-- `fees` — Consultation fee
-- `timings` — Available time slots (start - end)
-- `status` — Approval status (Pending / Approved)
-
-### Appointments
-- `_id` — Unique identifier
-- `userId` — Patient ID
-- `doctorId` — Doctor ID
-- `date` — Appointment date
-- `time` — Appointment time
-- `status` — Pending / Scheduled / Completed / Cancelled
-- `documents` — Path(s) to uploaded files
-
----
 
 ## 📸 Screenshots & Demo
 
