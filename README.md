@@ -28,15 +28,6 @@ DocSpot is a full-stack web application that simplifies booking medical appointm
 
 ---
 
-## 🏗 Technical Architecture
-
-DocSpot follows a classic client-server architecture:
-
-1. **Client (React):** UI for Users, Doctors, Admins; communicates via REST APIs.
-2. **Server (Express):** Business logic, authentication, file processing.
-3. **Database (MongoDB):** Stores users, doctors, appointments, documents.
-
-
 ## 📸 Screenshots & Demo
 
 ### Application Interface
